@@ -7,27 +7,28 @@
 
 
 
+#include <iostream> // Biblioteca para entrada e saída de dados
 
-#include <iostream>
 using namespace std;
 
 int main() {
-   int num, anterior = 0, atual = 1, proximo;
+   int num, anterior = 0, atual = 1, proximo; // Declaração das variáveis: num é o número digitado pelo usuário, anterior e atual são os dois primeiros números da sequência de Fibonacci e proximo é o próximo número a ser gerado na sequência
 
-   cout << "Digite um número: ";
-   cin >> num;
+   cout << "Digite um número: "; // Pede ao usuário que digite o número a ser verificado
+   cin >> num; // Lê o número digitado pelo usuário e armazena na variável num
 
-   while (proximo < num) {
-      proximo = anterior + atual;
-      anterior = atual;
-      atual = proximo;
+   while (proximo < num) { // Laço de repetição para gerar a sequência de Fibonacci até que o próximo número seja maior ou igual ao número digitado pelo usuário
+      proximo = anterior + atual; // Calcula o próximo número da sequência somando os dois números anteriores
+      anterior = atual; // Atualiza o valor do número anterior para o valor atual
+      atual = proximo; // Atualiza o valor do número atual para o valor do próximo número
    }
 
-   if (proximo == num) {
-      cout << num << " pertence à sequência de Fibonacci" << endl;
+   if (proximo == num) { // Verifica se o número digitado pelo usuário pertence à sequência de Fibonacci
+      cout << num << " pertence à sequência de Fibonacci" << endl; // Imprime mensagem informando que o número pertence à sequência de Fibonacci
    } else {
-      cout << num << " não pertence à sequência de Fibonacci" << endl;
+      cout << num << " não pertence à sequência de Fibonacci" << endl; // Imprime mensagem informando que o número não pertence à sequência de Fibonacci
    }
 
-   return 0;
+   return 0; // Indica que o programa foi executado com sucesso
 }
+
